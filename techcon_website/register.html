@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for TechCon 2024</title>
+    </head>
+<body>
+    <header>
+        <h1>Register for TechCon 2024</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Conference Registration Form</h2>
+        <p>Please fill out the form below to register for TechCon 2024.</p>
+
+        <form action="/submit-registration" method="post">
+            <fieldset>
+                <legend>Attendee Information</legend>
+
+                <div>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required autocomplete="name">
+                </div>
+
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="8" aria-describedby="password-help">
+                    <small id="password-help">Password must be at least 8 characters long.</small>
+                </div>
+
+                <div>
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Conference Preferences</legend>
+                <div>
+                    <label for="attendeeType">I am a:</label>
+                    <select id="attendeeType" name="attendeeType" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="professional">Industry Professional</option>
+                        <option value="academic">Academic/Researcher</option>
+                        <option value="student">Student</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Interested Tracks (select all that apply):</p>
+                    <input type="checkbox" id="aiData" name="tracks" value="aiData">
+                    <label for="aiData">AI & Data Science</label><br>
+
+                    <input type="checkbox" id="cyberCloud" name="tracks" value="cyberCloud">
+                    <label for="cyberCloud">Cybersecurity & Cloud Computing</label><br>
+
+                    <input type="checkbox" id="webDev" name="tracks" value="webDev">
+                    <label for="webDev">Web Development & UI/UX</label><br>
+
+                    <input type="checkbox" id="emergingTech" name="tracks" value="emergingTech">
+                    <label for="emergingTech">Emerging Technologies (e.g., Quantum, Blockchain)</label>
+                </div>
+            </fieldset>
+
+            <div>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="terms.html" target="_blank">terms and conditions</a> of TechCon 2024.</label>
+            </div>
+
+            <div>
+                <button type="submit">Register Now</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechCon Conference. All rights reserved.</p>
+    </footer>
+</body>
+</html>
